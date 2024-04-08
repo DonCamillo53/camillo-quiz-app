@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz-App</title>
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
     <header>
       <h1>Quiz App</h1>
     </header>
-    <main>
+    <main class="home-main">
       <section class="quiz-body">
         <div class="quiz-card">
           <img
@@ -18,7 +18,6 @@
             src="resources/bookmark.png"
             alt="Bookmark"
           />
-          <h1>Question:</h1>
           <p>What does CSS stand for?</p>
           <button>Show Answer</button>
           <ul class="tags">
@@ -35,10 +34,44 @@
             src="resources/bookmark.png"
             alt="Bookmark"
           />
-          <h1>Question:</h1>
           <p>
             Which CSS property is used to change the text color of an element?
           </p>
+          <button>Show Answer</button>
+          <ul class="tags">
+            <li>Tag 1</li>
+            <li>Tag 2</li>
+            <li>Tag 3</li>
+            <li>Tag 4</li>
+            <li>Tag 5</li>
+          </ul>
+        </div>
+        <div class="quiz-card">
+          <img
+            class="quiz-card-bookmark"
+            src="resources/bookmark.png"
+            alt="Bookmark"
+          />
+          <p>
+            What does the property <br />
+            '<strong>display: none;</strong>'<br />do?
+          </p>
+          <button>Show Answer</button>
+          <ul class="tags">
+            <li>Tag 1</li>
+            <li>Tag 2</li>
+            <li>Tag 3</li>
+            <li>Tag 4</li>
+            <li>Tag 5</li>
+          </ul>
+        </div>
+        <div class="quiz-card">
+          <img
+            class="quiz-card-bookmark"
+            src="resources/bookmark.png"
+            alt="Bookmark"
+          />
+          <p>How do you insert a comment in a CSS file?</p>
           <button>Show Answer</button>
           <ul class="tags">
             <li>Tag 1</li>
@@ -52,13 +85,16 @@
     </main>
     <footer>
       <nav>
-        <img src="resources/home.png" alt="Home Button" />
-        <img
-          id="bookmark-botton"
-          src="resources/bookmark.png"
-          alt="Bookmarks"
-        />
-        <img src="resources/profile.png" alt="Your Profile" />
+        <a href="#top"><img src="resources/home.png" alt="Home Button" /></a>
+        <a href="#"
+          ><img
+            id="bookmark-botton"
+            src="resources/bookmark.png"
+            alt="Bookmarks"
+        /></a>
+        <a href="./profile.html"
+          ><img src="resources/profile.png" alt="Your Profile"
+        /></a>
       </nav>
     </footer>
   </body>

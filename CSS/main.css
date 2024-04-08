@@ -1,7 +1,7 @@
-main {
+.home-main {
   background-color: var(--lightgrey);
   min-height: 100vh;
-  margin-top: 3rem;
+  padding: 3rem 0;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -14,9 +14,14 @@ main {
   padding: 2rem;
   align-items: center;
   max-width: 600px;
+  position: relative;
+  order: 0;
 }
 .quiz-card-bookmark {
   width: 2.4rem;
+  position: absolute;
+  top: -0.5rem;
+  right: 1rem;
 }
 .quiz-card h1 {
   font-size: 1.4rem;
@@ -27,25 +32,34 @@ main {
 .quiz-card p {
   font-size: 1.4rem;
   line-height: 1.8rem;
-  padding: 0 0 2rem;
+  padding: 5rem;
   font-style: italic;
   color: var(--blue);
   text-align: center;
   font-weight: 100;
 }
+strong {
+  background-color: var(--lightgrey);
+  color: var(--blue);
+  font-size: 1rem;
+  line-height: 1.8rem;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
 .quiz-card button {
   padding: 1.2rem 0.2rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border: none;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: var(--blue);
-  color: var(--white);
+  border: 0.1rem solid var(--blue);
+  background-color: var(--white);
+  color: var(--blue);
   margin-bottom: 3.4rem;
   width: 10rem;
 }
 .quiz-card button:hover {
-  padding: 1.4rem 0.4rem;
+  padding: 1.2rem 0.4rem;
+  transition: 0.8s;
 }
 .quiz-card .tags {
   display: flex;
