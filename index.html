@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
     <header>
@@ -13,16 +13,36 @@
     <main>
       <section class="quiz-body">
         <div class="quiz-card">
-          <img src="resources/bookmark.png" alt="Bookmark" />
-          <h2>Topic</h2>
-          <h1>Question</h1>
+          <img
+            class="quiz-card-bookmark"
+            src="resources/bookmark.png"
+            alt="Bookmark"
+          />
+          <h1>Question:</h1>
+          <p>What does CSS stand for?</p>
+          <button>Show Answer</button>
+          <ul class="tags">
+            <li>Tag 1</li>
+            <li>Tag 2</li>
+            <li>Tag 3</li>
+            <li>Tag 4</li>
+            <li>Tag 5</li>
+          </ul>
+        </div>
+        <div class="quiz-card">
+          <img
+            class="quiz-card-bookmark"
+            src="resources/bookmark.png"
+            alt="Bookmark"
+          />
+          <h1>Question:</h1>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
             nihil ipsum quidem, odit nisi ea nam quo, maxime, rem sit quae
             ratione?
           </p>
           <button>Show Answer</button>
-          <ul>
+          <ul class="tags">
             <li>Tag 1</li>
             <li>Tag 2</li>
             <li>Tag 3</li>
@@ -34,7 +54,7 @@
     </main>
     <footer>
       <img src="resources/home.png" alt="Home Button" />
-      <img src="resources/bookmark.png" alt="Bookmarks" />
+      <img id="bookmark-botton" src="resources/bookmark.png" alt="Bookmarks" />
       <img src="resources/profile.png" alt="Your Profile" />
     </footer>
   </body>

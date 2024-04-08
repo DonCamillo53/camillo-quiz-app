@@ -1,0 +1,16 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(main.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --lightgrey: #f4f5f6;
+  --darkgrey: #909396;
+  --white: #ffff;
+  --blue: #041036;
+}
