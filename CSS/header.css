@@ -7,7 +7,7 @@ header {
   left: 0;
   right: 0;
   border: none;
-  box-shadow: 0px 50px 10px var (--white);
+  box-shadow: 0px 05px 20px rgba(0, 0, 0, 0.2);
 }
 header h1 {
   text-align: center;
