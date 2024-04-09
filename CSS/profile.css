@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
+  color: var(--blue);
 }
 .profile-header {
   display: flex;
@@ -15,10 +16,32 @@
   margin-top: 5rem;
   margin: 8rem 0;
 }
+article p {
+  font-weight: 100;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--blue);
+}
 .profile-image {
   width: 6rem;
   height: 6rem;
   border-radius: 4rem;
+}
+.progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  gap: 2rem;
+  max-width: 500px;
+  margin: 3rem 0;
+}
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--lightgrey);
 }
 .counter img {
   width: 2rem;
@@ -31,4 +54,18 @@ article {
 
 article h2 {
   margin-bottom: 2rem;
+}
+.settings {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  align-self: center;
+}
+
+.dark-mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0 10rem 0;
 }
