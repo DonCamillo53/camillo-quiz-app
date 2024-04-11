@@ -17,7 +17,7 @@
   position: relative;
   order: 0;
 }
-.quiz-card-bookmark {
+.quiz-card__bookmark {
   width: 2.4rem;
   position: absolute;
   top: -0.5rem;
@@ -61,7 +61,7 @@ strong {
   padding: 1.2rem 0.4rem;
   transition: 0.8s;
 }
-.quiz-card .tags {
+.quiz-card__tags {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
