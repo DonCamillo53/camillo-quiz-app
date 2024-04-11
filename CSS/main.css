@@ -3,8 +3,8 @@
   min-height: 100vh;
   padding: 3rem 0;
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .quiz-card {
   display: flex;
@@ -12,10 +12,10 @@
   background-color: var(--white);
   margin: 50px 20px;
   padding: 2rem;
-  align-items: center;
   max-width: 600px;
   position: relative;
   order: 0;
+  width: 100%;
 }
 .quiz-card__bookmark {
   width: 2.4rem;
@@ -45,8 +45,9 @@ strong {
   line-height: 1.8rem;
   font-family: "Lucida Console", "Courier New", monospace;
 }
-.quiz-card button {
+.quiz-card__answer-button {
   padding: 1.2rem 0.2rem;
+  align-self: center;
   font-size: 0.8rem;
   border: none;
   font-weight: bold;
@@ -71,7 +72,7 @@ strong {
   content: "#";
 }
 .quiz-card li {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.2rem;
   font-style: italic;
   padding: 0.5rem;

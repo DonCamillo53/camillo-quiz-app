@@ -11,11 +11,13 @@ footer {
 }
 footer nav {
   padding: 1rem;
+  margin: 0 1rem;
   display: flex;
   justify-content: space-between;
+  max-width: 600px;
   width: 60rem;
 }
 footer nav img {
-  width: 2.5rem;
+  width: 2rem;
   height: auto;
 }
