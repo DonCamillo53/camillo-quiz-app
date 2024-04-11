@@ -1,6 +1,6 @@
 header {
   background-color: var(--white);
-  color: var(--darkgrey);
+  color: var(--primary-color);
   padding: 1rem;
   position: fixed;
   top: 0;

@@ -17,7 +17,11 @@ footer nav {
   max-width: 600px;
   width: 60rem;
 }
-footer nav img {
+.nav-icon {
   width: 2rem;
   height: auto;
+}
+
+.nav-icon__path {
+  fill: var(--primary-color);
 }
