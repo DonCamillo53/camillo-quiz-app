@@ -19,14 +19,12 @@
   width: 100%;
   box-shadow: 0px 05px 20px rgba(0, 0, 0, 0.08);
 }
-.quiz-card__bookmark__path {
-  fill: var(--tertiary-color);
-}
+
 .quiz-card__bookmark {
-  width: 3.5rem;
+  width: 2.5rem;
   height: auto;
   position: absolute;
-  top: -1rem;
+  top: -0.5rem;
   right: 1.4rem;
 }
 

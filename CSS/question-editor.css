@@ -1,0 +1,46 @@
+.home-main {
+  background-color: var(--white);
+  min-height: 100vh;
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.editor-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 50px 20px;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  position: relative;
+  order: 0;
+  width: 100%;
+  box-shadow: 0px 05px 20px rgba(0, 0, 0, 0.08);
+}
+
+.editor-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-card label {
+  margin: 3rem 0 0.5rem 0;
+}
+
+.editor-card textarea {
+  background-color: var(--quinary-color);
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.editor-card p {
+  text-align: right;
+  color: var(--darkgrey);
+}
+.editor-card #character-counter-tags {
+  margin-bottom: 3rem;
+}

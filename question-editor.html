@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-App</title>
+    <link rel="stylesheet" href="https://use.typekit.net/beh5sqk.css" />
+    <script src="JS/question-editor.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Quiz App</h1>
+      <div data-progressBar="progress-bar" class="progress-bar"></div>
+    </header>
+
+    <main class="home-main">
+      <section class="editor-card">
+        <h1>Create a Card</h1>
+        <form>
+          <label for="question-input">Question:</label>
+          <textarea
+            name="questionInput"
+            id="question-input"
+            cols="30"
+            rows="3"
+          ></textarea>
+          <p class="character-counter" id="character-counter-question">
+            120 characters left
+          </p>
+          <label for="answer-input">Answer:</label>
+          <textarea
+            name="answerInput"
+            id="answer-input"
+            cols="30"
+            rows="3"
+          ></textarea>
+          <p class="character-counter" id="character-counter-question">
+            120 characters left
+          </p>
+          <label for="tag-input">Tags:</label>
+          <textarea
+            name="tagInput"
+            id="tag-input"
+            cols="30"
+            rows="2"
+          ></textarea>
+          <p class="character-counter" id="character-counter-tags">
+            120 characters left
+          </p>
+          <button class="quiz-card__answer-button">Create Card</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <a href="#top"><img src="resources/home.png" alt="Home" /></a>
+        <a href="bookmarks.html"><img src="resources/bookmark.png" alt="" /></a>
+        <a href="question-editor.html"
+          ><img src="resources/question-editor.png" alt="Question Editor"
+        /></a>
+        <a href="./profile.html" id="profile-icon"
+          ><img src="resources/profile.png" alt=""
+        /></a>
+      </nav>
+    </footer>
+  </body>
+</html>
