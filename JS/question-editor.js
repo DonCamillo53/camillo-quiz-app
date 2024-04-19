@@ -1,16 +1,51 @@
-// formInput.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   const formElements = event.target.elements;
-
-//   console.log(formElements.questionInput.value);
-// });
-
 const main = document.querySelector("main");
 const formInput = document.querySelector("form");
+const questionInputField = document.getElementById("question-input");
+const answerInputField = document.getElementById("answer-input");
+const tagInputField = document.getElementById("tag-input");
+const answerCharactersLeft = document.getElementById(
+  "character-counter-answer"
+);
+const questionCharactersLeft = document.getElementById(
+  "character-counter-question"
+);
+const tagCharactersLeft = document.getElementById("character-counter-tags");
+answerInputField.addEventListener("input", () => {
+  let textArea = answerInputField.value.length;
+  let charactersLeft = 200 - textArea;
+  let displayParagraph = answerCharactersLeft;
+  displayParagraph.textContent = `${charactersLeft} characters left`;
+});
+tagInputField.addEventListener("input", () => {
+  let textArea = tagInputField.value.length;
+  let charactersLeft = 100 - textArea;
+  let displayParagraph = tagCharactersLeft;
+  displayParagraph.textContent = `${charactersLeft} characters left`;
+});
 
 let question = "This is a Question";
 let answer = "This is an Answer";
-let tagInput = "CSS, HTML, Basics, Coding, Create";
+let tags = "CSS, HTML, Basics, Coding, Create";
+
+questionInputField.addEventListener("input", () => {
+  let textArea = questionInputField.value.length;
+  let charactersLeft = 200 - textArea;
+  let displayParagraph = questionCharactersLeft;
+  displayParagraph.textContent = `${charactersLeft} characters left`;
+});
+
+formInput.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formElements = event.target.elements;
+
+  question = formElements.questionInput.value;
+  answer = formElements.answerInput.value;
+  tags = formElements.tagInput.value;
+
+  createNewCard(question, answer, tags);
+
+  formInput.reset();
+});
 
 function toggleAnswerToQuestion(button, questionParagraph, question, answer) {
   button.addEventListener("click", () => {
@@ -26,19 +61,23 @@ function toggleAnswerToQuestion(button, questionParagraph, question, answer) {
   });
 }
 
-function createNewCard(question, answer, tagInput) {
+function createNewCard(question, answer, tags) {
   let card = document.createElement("section");
   main.append(card);
   card.setAttribute("class", "quiz-card");
 
-  let quizCardBookmark = document.createElement("a");
-  card.append(quizCardBookmark);
-  quizCardBookmark.setAttribute("class", "quizcard-bookmark");
-
   let quizCardBookmarkIcon = document.createElement("img");
-  quizCardBookmark.append(quizCardBookmarkIcon);
+  card.append(quizCardBookmarkIcon);
   quizCardBookmarkIcon.setAttribute("src", "resources/bookmark-inactive.png");
   quizCardBookmarkIcon.setAttribute("class", "quiz-card__bookmark");
+
+  quizCardBookmarkIcon.addEventListener("click", () => {
+    if (quizCardBookmarkIcon.src.includes("resources/bookmark-inactive.png")) {
+      quizCardBookmarkIcon.src = "resources/bookmark.png";
+    } else {
+      quizCardBookmarkIcon.src = "resources/bookmark-inactive.png";
+    }
+  });
 
   let questionParagraph = document.createElement("p");
   card.append(questionParagraph);
@@ -55,13 +94,12 @@ function createNewCard(question, answer, tagInput) {
   card.append(tagUl);
   tagUl.setAttribute("class", "quiz-card__tags");
 
-  const tagArray = tagInput.split(",");
+  tags = tags.replaceAll(" ", "");
+  const tagArray = tags.split(",");
 
-  for (const tags of tagArray) {
+  for (const individualTags of tagArray) {
     let tagLi = document.createElement("li");
     tagUl.append(tagLi);
-    tagLi.textContent = tags;
+    tagLi.textContent = individualTags;
   }
 }
-
-createNewCard(question, answer, tagInput);
