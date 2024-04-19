@@ -14,13 +14,14 @@
   --lightgrey: #f4f5f6;
   --darkgrey: #909396;
   --white: #ffffff;
+  --transparent-white: rgba(250,250,250,0.4)
   --blue: #041036;
 
   --primary-color: #1e2749;
   --secondary-color: #273469;
   --tertiary-color: #e4d9ff;
   --quaternary-color: #2dd6c1;
-  --quinary-color: #caf0f8;
+  --quinary-color: rgba(202, 240, 248, 0.4);
   --lightgrey: #f4f5f6;
   --darkgrey: #909396;
 }
