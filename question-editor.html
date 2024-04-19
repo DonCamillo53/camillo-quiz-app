@@ -22,33 +22,39 @@
         <form>
           <label for="question-input">Question:</label>
           <textarea
+            placeholder="Insert your question here..."
             name="questionInput"
             id="question-input"
             cols="30"
             rows="3"
+            maxlength="200"
           ></textarea>
           <p class="character-counter" id="character-counter-question">
-            120 characters left
+            200 characters left
           </p>
           <label for="answer-input">Answer:</label>
           <textarea
+            placeholder="Insert your answer here..."
             name="answerInput"
             id="answer-input"
             cols="30"
             rows="3"
+            maxlength="200"
           ></textarea>
-          <p class="character-counter" id="character-counter-question">
-            120 characters left
+          <p class="character-counter" id="character-counter-answer">
+            200 characters left
           </p>
           <label for="tag-input">Tags:</label>
           <textarea
+            placeholder="Insert multiple tags here by using commas (e.g. ' tag1, tag2, tag3 ')..."
             name="tagInput"
             id="tag-input"
             cols="30"
             rows="2"
+            maxlength="100"
           ></textarea>
           <p class="character-counter" id="character-counter-tags">
-            120 characters left
+            100 characters left
           </p>
           <button class="quiz-card__answer-button">Create Card</button>
         </form>
