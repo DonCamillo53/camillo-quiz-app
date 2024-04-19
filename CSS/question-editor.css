@@ -19,14 +19,17 @@
   width: 100%;
   box-shadow: 0px 05px 20px rgba(0, 0, 0, 0.08);
 }
-
+.editor-card h1 {
+  color: var(--primary-color);
+}
 .editor-card form {
   display: flex;
   flex-direction: column;
 }
 
 .editor-card label {
-  margin: 3rem 0 0.5rem 0;
+  margin: 3rem 0 0.5rem 1rem;
+  color: var(--primary-color);
 }
 
 .editor-card textarea {
