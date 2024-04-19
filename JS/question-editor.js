@@ -10,6 +10,7 @@ const formInput = document.querySelector("form");
 
 let question = "This is a Question";
 let answer = "This is an Answer";
+let tagInput = "CSS, HTML, Basics, Coding, Create";
 
 function toggleAnswerToQuestion(button, questionParagraph, question, answer) {
   button.addEventListener("click", () => {
@@ -25,7 +26,7 @@ function toggleAnswerToQuestion(button, questionParagraph, question, answer) {
   });
 }
 
-function createNewCard(question, answer) {
+function createNewCard(question, answer, tagInput) {
   let card = document.createElement("section");
   main.append(card);
   card.setAttribute("class", "quiz-card");
@@ -49,6 +50,18 @@ function createNewCard(question, answer) {
   button.textContent = "Show Answer";
 
   toggleAnswerToQuestion(button, questionParagraph, question, answer);
+
+  let tagUl = document.createElement("ul");
+  card.append(tagUl);
+  tagUl.setAttribute("class", "quiz-card__tags");
+
+  const tagArray = tagInput.split(",");
+
+  for (const tags of tagArray) {
+    let tagLi = document.createElement("li");
+    tagUl.append(tagLi);
+    tagLi.textContent = tags;
+  }
 }
 
-createNewCard(question, answer);
+createNewCard(question, answer, tagInput);
