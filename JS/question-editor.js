@@ -96,10 +96,11 @@ function createNewCard(question, answer, tags) {
 
   tags = tags.replaceAll(" ", "");
   const tagArray = tags.split(",");
-
-  for (const individualTags of tagArray) {
-    let tagLi = document.createElement("li");
-    tagUl.append(tagLi);
-    tagLi.textContent = individualTags;
+  for (const individualTag of tagArray) {
+    if (individualTag.length) {
+      let tagLi = document.createElement("li");
+      tagUl.append(tagLi);
+      tagLi.textContent = individualTag;
+    }
   }
 }
